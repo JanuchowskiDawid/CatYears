@@ -5,32 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CatYears"
         mc:Ignorable="d"
+        Name="myMainWindow"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="Black">
-        <Image 
-            Source="/Images/Cat.jpg"
-            ClipToBounds="True"
-        />
-        <StackPanel Orientation="Vertical">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock 
-                FontSize="35"
-                Text="How old is your cat? (human years): "
-                Foreground="White"
-                />
-                <TextBox x:Name="inputCatAge"
-                     FontSize="35" 
-                     Width="100"
-                     TextAlignment="Center"
-                         KeyDown="inputCatAge_KeyDown"
-                     />
-            </StackPanel>
-            <TextBlock 
-            x:Name="resultTextBlock"
-            FontSize="35" 
-            Text="Your cat age is: "
-            Foreground="White"
-            />
-        </StackPanel>
-    </Grid>
 </Window>
