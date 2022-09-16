@@ -24,5 +24,33 @@ namespace CatYears
         {
             InitializeComponent();
         }
+
+        private void inputCatAge_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                try
+                {
+                    double humanYears = Convert.ToDouble(inputCatAge.Text);
+                    string age;
+                    if (humanYears >= 0 && humanYears < 1)
+                    {
+                        age = "0-15";
+                    }
+                    else if(humanYears >= 1 && humanYears < 2){
+                        age = "15-24";
+                    }
+                    else
+                    {
+                        age = (24+(humanYears-2)*4).ToString();
+                    }
+                    resultTextBlock.Text = "Your cat age is: " + age;
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Not a valid number, please ender valid number" + ex);
+                }
+            }
+        }
     }
 }
